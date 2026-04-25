@@ -1,0 +1,40 @@
+Write a program that takes in a line of text as input, and outputs that line of text in reverse. 
+The program repeats, ending when the user enters "Done", "done", or "d" for the line of text.
+
+Ex: If the input is:
+
+Hello there
+Hey
+done
+
+then the output is:
+ereht olleH
+yeH
+
+
+Program:
+I prefer this program because this one is simplier and takes less lines and does the same work.
+
+METHOD 1:
+text = input()
+
+while text != "Done" and text != "done" and text != "d":
+    reversed_text = text[::-1]
+    print(reversed_text)
+    text = input()
+
+
+
+(This is how I started.....)
+while True:
+    a = input()
+    result = a != "Done" and a != "done" and a != "d"
+
+    if result == True:
+        reversed_text = a[::-1]
+        print(reversed_text)
+
+    else:
+        break
+
+
