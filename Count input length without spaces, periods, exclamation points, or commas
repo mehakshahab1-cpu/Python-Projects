@@ -1,0 +1,25 @@
+Given a line of text as input, output the number of characters excluding spaces, periods, exclamation points, or commas.
+
+Ex: If the input is:
+Listen, Mr. Jones, calm down.
+the output is:
+21
+Note: Account for all characters that aren't spaces, periods, exclamation points, or commas (Ex: "r", "2", "?").
+
+
+PROGRAM:
+user_text = input()
+
+count = 0
+#LOOP HROUGH THE STRING 
+for c in user_text:
+   # DETERMINE IF CHAR SHOULD BE INCLUDED IN THE COUNT 
+   result = (c != " ") and (c != "!") and (c != ",") and (c != ".")
+
+   if result:
+       #IF SO, INCREMENT THE COUNT
+       count += 1
+
+
+#OUTPUT THE ANSWER ACCORDING THE ZY BOOKS
+print(count)
