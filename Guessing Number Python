@@ -1,0 +1,35 @@
+import random 
+
+answer = random.randint(1,100)
+guesses = 0
+
+
+while True:
+    
+    guess = int(input("Enter 1-100 (0 to quit): "))
+    
+    if guesses >= 10:
+        print("\n You used all the guesses. Game Over")
+        break
+    
+    if guess == 0:
+        print("\n****Quitter****\n")
+        break
+    elif guess < 0 or guess > 100:
+        print("\n***Not in Range***\n")
+        continue
+    
+    
+    guesses += 1
+    
+    if guess == answer:
+        print("\n!!!Hooray!!!")
+        break
+    
+    elif guess < answer:
+        print("\n\tGuess Higher\n\t")
+        
+    elif guess > answer:
+        print("\n\tGuess Lower\n")
+        
+print(f"\nGuesses: {guesses}")
